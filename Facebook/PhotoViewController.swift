@@ -14,9 +14,6 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var viewWithDoneButton: UIView!
     var image1 : UIImage!
-    var fadeTransition: FadeTransition!
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,8 +52,6 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
         let Scroll = scrollView.contentOffset.y
         
         if Scroll < -50 {
-            fadeTransition = FadeTransition()
-            fadeTransition.duration = 1.0
             dismiss(animated: true, completion: nil)
         } else {
             self.doneButton.isHidden = false
