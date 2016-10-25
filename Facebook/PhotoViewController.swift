@@ -50,6 +50,8 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         // This method is called right as the user lifts their finger
         let Scroll = scrollView.contentOffset.y
+        self.view.backgroundColor = UIColor(white: 0, alpha: 1)
+
         
         if Scroll < -50 {
             dismiss(animated: true, completion: nil)
